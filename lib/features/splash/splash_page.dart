@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:architecture/config/image/images.dart';
 import 'package:architecture/features/post/presentation/ui/post_page.dart';
+import 'package:architecture/routes/app_router.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget{
@@ -26,7 +28,7 @@ class _SplashPageState extends State<SplashPage>{
   @override
   Widget build(BuildContext context) {
 
-    _timer= Timer(const Duration(seconds: 3),()=> const PostPage());
+    _timer= Timer(const Duration(seconds: 3),()=>  context.router.replace(PostRoute()));
     return Scaffold(
         body:SafeArea(
           child: Container(

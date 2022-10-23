@@ -1,3 +1,4 @@
+import 'package:architecture/features/post/presentation/ui/post_page.dart';
 import 'package:architecture/features/splash/splash_page.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
@@ -8,7 +9,7 @@ part 'app_router.gr.dart';
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
     AutoRoute(page:SplashPage, initial: true),
-  //  AutoRoute(page:OnBoardingPage),
+    AutoRoute(page:PostPage),
 
 
   ],

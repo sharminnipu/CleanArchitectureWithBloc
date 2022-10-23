@@ -10,7 +10,7 @@ class ActivityBloc extends Bloc<ActivityEvent, ActivityState> {
   final GetActivityUseCase getActivityUseCase;
 
 
-  ActivityBloc(this.getActivityUseCase) : super(ActivityStateLoadingState()) {
+  ActivityBloc({required this.getActivityUseCase}) : super(ActivityStateLoadingState()) {
 
 
     on<LoadApiEvent>((event, emit) async {

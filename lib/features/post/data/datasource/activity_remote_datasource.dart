@@ -23,7 +23,7 @@ class ActivityRemoteDataSourceImpl implements ActivityRemoteDataSource{
 
   @override
   Future<ActivityModel> getActivity()async {
-    final response = await DioHelper().getDataWithoutToken("");
+    final response = await DioHelper().getDataWithoutToken("activity");
     if (response.statusCode == 200) {
       return ActivityModel.fromJson(response.data);
     } else {

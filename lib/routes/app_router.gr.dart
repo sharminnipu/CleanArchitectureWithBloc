@@ -22,7 +22,13 @@ class _$AppRouter extends RootStackRouter {
         routeData: routeData,
         child: SplashPage(),
       );
-    }
+    },
+    PostRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const PostPage(),
+      );
+    },
   };
 
   @override
@@ -30,7 +36,11 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           SplashRoute.name,
           path: '/',
-        )
+        ),
+        RouteConfig(
+          PostRoute.name,
+          path: '/post-page',
+        ),
       ];
 }
 
@@ -44,4 +54,16 @@ class SplashRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'SplashRoute';
+}
+
+/// generated route for
+/// [PostPage]
+class PostRoute extends PageRouteInfo<void> {
+  const PostRoute()
+      : super(
+          PostRoute.name,
+          path: '/post-page',
+        );
+
+  static const String name = 'PostRoute';
 }
